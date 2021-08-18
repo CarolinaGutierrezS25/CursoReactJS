@@ -6,6 +6,8 @@ body{
     height: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    font-family: 'Georama', sans-serif;
+    font-size: 15pt;
 }
 
 #root{
@@ -15,14 +17,14 @@ body{
 }
 
 .header-mark{
-    position: fixed;
+    position: relative;
     display: flex;
     width: 100%;
     max-width: 100vw;
     background: #7a36ff;
     margin: 0;
-    top: 0;
-    left: 0;
+    top: -8px;
+    left: -8px;
     padding: 10px 20px;
     box-shadow: rgb(0 0 0 / 63%) -1px 1px 10px;
     align-items: center;
@@ -73,6 +75,13 @@ body{
     width: 70%;
 }
 
+.material-i{
+    color: white;
+    text-shadow: 0 0 2px black;
+    font-size: 30pt;
+    padding-left: 40px;
+}
+
 .row{
     display: -ms-flexbox;
     display: flex;
@@ -87,4 +96,10 @@ body{
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 35px 10px;
 }
