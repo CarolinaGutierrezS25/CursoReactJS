@@ -103,3 +103,45 @@ body{
     margin: auto;
     padding: 35px 10px;
 }
+
+.container-item-count{
+    display: flex;
+    place-items: center;
+    margin: 15px 10px;
+}
+
+.btn-operation{
+    outline: none;
+    background: transparent;
+    border: none;
+    font-size: 25pt;
+    color: #7a36ff;
+    text-shadow: 0 0 2px black;
+    cursor: pointer;
+}
+
+.text-count{
+    margin: 5px 20px;
+    color: #444444;
+    font-weight: bolder;
+    cursor: default;
+}
+
+.btn-add{
+    background: #dcdcdc00;
+    border: solid 1px #7a36ff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #848484;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 0 black;
+    cursor: pointer;
+}
+
+.btn-add:hover{
+    background: #7a36ff;
+    border: solid 1px #7a36ff;
+    color: white;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 0 black;
+}
