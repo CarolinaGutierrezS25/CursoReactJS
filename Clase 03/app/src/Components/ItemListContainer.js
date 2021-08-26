@@ -1,10 +1,12 @@
-import ItemCount from "./ItemCount";
+import ItemList from "./ItemList";
 const ItemListContainer = (props) => {
     console.log(props);
+    
     return (
-        <div class="container">
+        <div className="container">
             <p>Bienvenido {props.name}</p>
-            <ItemCount stock={5} initial={1} onAdd={(c)=>{console.log(c)}}/>
+            <ItemList/>
+            
         </div>
     )
 }
