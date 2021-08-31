@@ -1,5 +1,7 @@
 import Item from "./Item";
 import { useEffect, useState } from "react";
+import Loader from 'react-loader-spinner';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 const promise = () =>{ 
     return(
@@ -11,7 +13,7 @@ const promise = () =>{
                     {name:"Articulo3", id:"3", price:"700", pictureUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrKulECfw1ycujtkmILHEU8bJEDLt_OHl_aA&usqp=CAU"},
                     {name:"Articulo4", id:"4", price:"950", pictureUrl:"https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/7500454836840.jpg"}
                 ])
-            }, 10000)
+            }, 2000)
         })
     )
 }
@@ -29,7 +31,9 @@ const ItemList = () => {
     return ( 
         <div className="container-itemlist">
             {dataShow.length == 0 ? (
-                <h3>Cargando Items ...</h3>
+                <div>
+                    <Loader type="Grid" color="#7a36ff" height={80} width={80}/>
+                </div>
             ) : (
                 <>
                     {dataShow.map((item)=>(<Item item={item}/>))}

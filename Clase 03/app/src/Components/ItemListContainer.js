@@ -1,3 +1,4 @@
+import ItemDetailContainer from "./ItemDetailContainer";
 import ItemList from "./ItemList";
 const ItemListContainer = (props) => {
     console.log(props);
@@ -5,8 +6,7 @@ const ItemListContainer = (props) => {
     return (
         <div className="container">
             <p>Bienvenido {props.name}</p>
-            <ItemList/>
-            
+            <ItemDetailContainer/>
         </div>
     )
 }

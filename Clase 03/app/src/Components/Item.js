@@ -1,5 +1,4 @@
 const Item = ({item}) => {
-    console.log(item)
     return ( 
         <a key={item.id} href="#">
             <div className="card-item">
