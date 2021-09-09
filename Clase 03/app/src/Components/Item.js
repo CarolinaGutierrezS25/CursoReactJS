@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Item = ({item}) => {
+    let ref = "/item/"+item.id
     return ( 
-        <a key={item.id} href="#">
+        <Link key={item.id} to={ref}>
             <div className="card-item">
                 <div>
                     <h3 className="item-title">{item.name}</h3>
@@ -12,7 +15,7 @@ const Item = ({item}) => {
                     <p>$ {item.price} MXN</p>
                 </div>
             </div> 
-        </a>
+        </Link>
     );
 }
  
