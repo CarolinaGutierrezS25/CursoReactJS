@@ -1,4 +1,37 @@
+import ItemCount from "./ItemCount";
+import { useState } from "react";
+import { Link } from "react-router-dom"
+
+
+const Button = ({item}) => {
+    let [quantity, setQuantity] = useState(0)
+
+    const onAdd = (quantityToAdd) =>{
+        console.log(quantityToAdd)
+        setQuantity(quantityToAdd)
+    }
+    
+    return(
+        <>
+            {quantity === 0 ?
+                (
+                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                ) 
+                : 
+                (
+                    <div div className="mt-5">
+                        <Link to="/cart"> <button className="btn-add" >Terminar compra</button> </Link> 
+                    </div>
+                )
+            }
+        </>
+    );
+}
+
+
 const ItemDetail = ({item}) => {
+    
+
     return ( 
         <div className="card-item-detail">
             <div className="img-section-detail">
@@ -14,7 +47,7 @@ const ItemDetail = ({item}) => {
                     <li> <h3 className="item-title display-title">Stock: <p className="font-color m-0"> {item.stock}</p> </h3> </li>
                 </ul>
                 <h2 className="item-title font-color">$ {item.price} MXN</h2>
-                <button className="btn-detail-add">Agregar al Carrito</button>
+                <Button item={item}/>
             </div>
         </div> 
      );
