@@ -3,7 +3,7 @@ import ItemListContainer from "./Components/ItemListContainer";
 import { BrowserRouter , Route , Switch } from 'react-router-dom'
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Cart from "./Components/cart";
+import Cart from "./Components/Cart";
 import CartContext from "./Context/CartContext";
 const App = () => {
     return(
