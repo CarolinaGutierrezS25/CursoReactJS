@@ -22,19 +22,15 @@ const CartContext = ({children}) => {
             }
             items_aux.push(item_pop)
         }
-        console.log(items_aux)
         setItems(items_aux)
-        
     }
 
     const removeItem = (itemId) => {
-        items_aux.pop(items.find(items => items.id  === itemId))
-        setItems(items_aux)
+        setItems(items.filter(item => item.id !== itemId))
     }
 
-    const clear = ()=>{
-        items_aux = []
-        setItems(items_aux)
+    const clear = ()=>{ 
+        setItems([])
     }
 
     const isInCart = (id) => {
@@ -46,7 +42,7 @@ const CartContext = ({children}) => {
     }
 
     return(
-        <Provider value={{items, addItem}}>
+        <Provider value={{items, addItem, removeItem}}>
             {children}
         </Provider>
     );

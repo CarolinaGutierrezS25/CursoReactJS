@@ -5,17 +5,23 @@ import { useState } from "react";
 const ItemCount = ({stock, initial, onAdd}) => {
     let [count, setCount] = useState(initial)
 
-    const sum = () => {
+    const sum = (e) => {
+        e.stopPropagation()
+        e.preventDefault()
         if(count < stock){
             setCount(count + 1)
         }
     }
-    const subs = () => {
+    const subs = (e) => {
+        e.stopPropagation()
+        e.preventDefault()
         if(count > 1){
             setCount(count - 1)
         }
     }
-    const add = () => {
+    const add = (e) => {
+        e.stopPropagation()
+        e.preventDefault()
         if(stock > 0 && count <= stock){
             onAdd(count)
         }

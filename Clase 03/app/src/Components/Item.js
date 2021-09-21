@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Item = ({item}) => {
     let ref = "/item/"+item.id
     return ( 
-        <Link key={item.id} to={ref}>
+        <Link to={ref}>
             <div className="card-item">
                 <div>
                     <h3 className="item-title">{item.name}</h3>

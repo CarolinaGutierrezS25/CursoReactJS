@@ -9,7 +9,7 @@ const Button = ({item}) => {
     let [quantity, setQuantity] = useState(0)
 
     const {items, addItem} = useContext(context)
-    console.log(items)
+    //console.log(items)
 
     const onAdd = (quantityToAdd) =>{
         setQuantity(quantityToAdd)
@@ -25,7 +25,7 @@ const Button = ({item}) => {
                 : 
                 (
                     <div div className="mt-5">
-                        <Link to="/cart"> <button className="btn-add" >Terminar compra</button> </Link> 
+                        <Link to="/cart"> <a className="btn-add">Terminar compra</a> </Link> 
                     </div>
                 )
             }

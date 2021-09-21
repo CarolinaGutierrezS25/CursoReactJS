@@ -12,9 +12,9 @@ const NavBar = () => {
                     </h1>
                 </div>
                 <div className="main-buttons-content">
-                    <div class="dropdown">
-                        <button class="dropbtn">Categorias<span class="material-icons">expand_more</span></button>
-                        <div class="dropdown-content">
+                    <div className="dropdown">
+                        <button className="dropbtn">Categorias<span className="material-icons">expand_more</span></button>
+                        <div className="dropdown-content">
                             <Link to="/">
                                 <span>Todas</span>
                             </Link>
