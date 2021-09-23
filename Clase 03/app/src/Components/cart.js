@@ -16,7 +16,7 @@ const promise = () =>{
 
 
 const Cart = () => {
-    const {items, removeItem} = useContext(context)
+    const {items, removeItem, clear} = useContext(context)
     
     let [quantity, setQuantity] = useState(0)
     let [total, setTotal] = useState(0)
@@ -67,6 +67,12 @@ const Cart = () => {
                         (   
                             <div className="row align-cntr">
                                 <div className="col-sm-8 col-md-8 col-lg-8">
+                                    <div className="row m-3">
+                                        <button className="btn-delete btn-clear" onClick={(e) => clear(e)}>
+                                            <h3 className="item-title mb-0">Vaciar Carrito</h3>
+                                            <span className="material-icons material-i color-p">delete</span>
+                                        </button>
+                                    </div>
                                     <div className ="row">
                                         {items.map((item)=>(
                                             <div className="col-12">

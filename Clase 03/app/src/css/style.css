@@ -334,7 +334,10 @@ p{
     outline: none;
     border: none;
     background: transparent;
+    display: inline-flex;
     text-align: -webkit-center;
+    place-content: center;
+    place-items: center;
 }
 
 .counter-items{
@@ -345,4 +348,14 @@ p{
     font-size: 11pt;
     color: white;
     top: 10px;
+}
+
+.btn-clear{
+    background: #7a36ff40;
+    width: auto;
+    box-shadow: 0 0 4px 0px black;
+}
+
+.btn-clear:hover{
+    background: #42424273;
 }

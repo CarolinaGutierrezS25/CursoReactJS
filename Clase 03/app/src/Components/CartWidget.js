@@ -18,7 +18,7 @@ const CartWidget = () => {
     },[items])
 
     return(
-        <div hidden={quantity == 0 ? true : false} >
+        <div hidden={quantity === 0 ? true : false} >
             <Link className="nav-link" to="/cart">
                 <span className="material-icons material-i">shopping_cart</span>
                 <span className="counter-items">{quantity}</span>

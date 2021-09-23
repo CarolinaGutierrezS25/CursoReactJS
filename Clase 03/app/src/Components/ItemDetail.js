@@ -8,8 +8,7 @@ import { context } from "../Context/CartContext";
 const Button = ({item}) => {
     let [quantity, setQuantity] = useState(0)
 
-    const {items, addItem} = useContext(context)
-    //console.log(items)
+    const {addItem} = useContext(context)
 
     const onAdd = (quantityToAdd) =>{
         setQuantity(quantityToAdd)
@@ -25,7 +24,7 @@ const Button = ({item}) => {
                 : 
                 (
                     <div div className="mt-5">
-                        <Link to="/cart"> <a className="btn-add">Terminar compra</a> </Link> 
+                        <Link to="/cart"> <button className="btn-add">Terminar compra</button> </Link> 
                     </div>
                 )
             }
