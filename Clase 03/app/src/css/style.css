@@ -120,7 +120,7 @@ p{
 }
 
 .logo-title-content{
-    width: 25%;
+    width: 100%;
     display: -webkit-inline-box;
     -webkit-box-align: center;
 }
@@ -202,7 +202,7 @@ p{
 }
 
 .card-item{
-    width: 30%;
+    width: 90%;
     height: 400px;
     padding: 1rem 3rem;
     box-shadow: 0 0 4px 0px black;
@@ -210,6 +210,12 @@ p{
     text-align: center;
     margin: 25px;
     display: inline-block;
+    background-color: white;
+}
+
+.card-item:hover{
+    box-shadow: 0 0 8px 1px #7a36ff57;
+    transform: translateX(5px);
 }
 
 .img-section{
@@ -253,7 +259,7 @@ p{
     text-align: center;
 }
 .card-item-detail {
-    width: 80%;
+    width: 100%;
     height: 650px;
     padding: 1rem 3rem;
     box-shadow: 0 0 4px 0px black;
@@ -261,6 +267,7 @@ p{
     text-align: center;
     margin: 25px;
     display: inline-block;
+    background: white;
 }
 
 .img-section-detail {
@@ -309,6 +316,9 @@ p{
     background: #4e24a1; 
 }
 
+.bg-e8{
+    background: #e8e8e8;
+}
 
 
 .card-item-cart{
@@ -318,7 +328,7 @@ p{
     box-shadow: 0 0 4px 0px black;
     border-radius: 10px;
     text-align: center;
-    margin: 25px;
+    margin: 25px 0px;
     display: inline-block;
 }
 
@@ -328,6 +338,8 @@ p{
 
 .align-cntr{
     align-items: center;
+    text-align: center;
+    align-self: center;
 }
 
 .btn-delete{
@@ -342,12 +354,12 @@ p{
 
 .counter-items{
     position: absolute;
-    background: #424242;
+    background: #7a36ff;
     padding: 3px 8px;
     border-radius: 100%;
     font-size: 11pt;
     color: white;
-    top: 10px;
+    top: 25px;
 }
 
 .btn-clear{
@@ -358,4 +370,77 @@ p{
 
 .btn-clear:hover{
     background: #42424273;
+}
+
+.detail_li {
+    list-style-type: none;
+    border-bottom: .01px solid gray;
+    text-align: left;
+    color: #3f3f3f;
+}
+
+.span_right {
+    float: right;
+}
+.a_left {
+    float: left;
+}
+
+.nav-dark {
+    border-bottom: 10px solid #7a36ff;
+    background-color: #424242 !important;
+}
+
+.dropdown {
+    position: relative !important;
+}
+
+.footer-dark{
+    border-top: 5px solid #7a36ff;
+    background-color: #424242 !important;
+    color: white;
+    text-align: -webkit-center;
+}
+
+.label-form{
+    display: block;
+    color: #424242;
+    font-family: 'Georama', sans-serif;
+    font-weight: 600;
+    margin: 5px 0px;
+}
+
+.input-form{
+    border: none;
+    border-bottom: 1px solid #7a36ff;
+    width: 100%;
+    padding: 5px 10px;
+    background: transparent;
+}
+
+.input-form:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #7a36ff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(122 54 255 / 40%);
+}
+
+.align-text-left{
+    text-align: left;
+}
+
+.align-text-right{
+    text-align: right;
+}
+
+.logo_order{
+    width: 80%;
+    height: auto;
+}
+
+.done_order {
+    width: 100%;
+    color: #7a36ff;
+    font-size: 90px;
 }

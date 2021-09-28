@@ -16,7 +16,7 @@ const promise = () =>{
 
 
 const Cart = () => {
-    const {items, removeItem, clear} = useContext(context)
+    const {items, removeItem, clear, calculate_Iva, calculate_total, total_Iva, envio, iva} = useContext(context)
     
     let [quantity, setQuantity] = useState(0)
     let [total, setTotal] = useState(0)
@@ -32,19 +32,30 @@ const Cart = () => {
             }))
             setQuantity(quantity_)
             setTotal(total_)
+            
         }
         promise().then((band)=>{
             setLoading(band)
         })
     },[items])
+
+    useEffect(() => {
+        calculate_Iva(total)
+    },[total])
     
+    useEffect(() => {
+        calculate_total(total)
+    },[iva])
+
     const delete_itm = (id, e) => {
         e.stopPropagation()
         removeItem(id)
     }
 
+    
+
     return ( 
-        <div className="container">
+        <div className="container mt-5 mb-5">
             <div className="container-itemlist">
                 {loading === false ?
                     (
@@ -67,11 +78,13 @@ const Cart = () => {
                         (   
                             <div className="row align-cntr">
                                 <div className="col-sm-8 col-md-8 col-lg-8">
-                                    <div className="row m-3">
-                                        <button className="btn-delete btn-clear" onClick={(e) => clear(e)}>
-                                            <h3 className="item-title mb-0">Vaciar Carrito</h3>
-                                            <span className="material-icons material-i color-p">delete</span>
-                                        </button>
+                                    <div className="row mt-3 mb-3">
+                                        <div className="col-12">
+                                            <button className="btn-delete btn-clear" onClick={(e) => clear(e)}>
+                                                <h3 className="item-title mb-0">Vaciar Carrito</h3>
+                                                <span className="material-icons material-i color-p">delete</span>
+                                            </button>
+                                        </div>
                                     </div>
                                     <div className ="row">
                                         {items.map((item)=>(
@@ -110,11 +123,23 @@ const Cart = () => {
                                     </div>
                                 </div>
                                 <div className="col-sm-8 col-md-4 col-lg-4">
-                                    <h1 className="item-title font-color">Total a pagar: </h1>
-                                    <h4>{total} MXN</h4>
-                                    <div div className="mt-5">
-                                        <Link to="/"> <button className="btn-add" >Pagar</button> </Link> 
+                                    <div className="row"> 
+                                        <div class="col-12">
+                                            <h1 className="item-title font-color mb-3">Detalle de compra</h1>
+                                            <ul>
+                                                <li className="detail_li"><span>Costo de Artículos:</span><span className="span_right"> {total} MXN</span></li>
+                                                <li className="detail_li"><span>IVA (16%): </span><span className="span_right">{iva} MXN</span></li>
+                                                <li className="detail_li"><span>Envío: </span> <span className="span_right">{envio} MXN</span></li>
+                                                <li className="detail_li"><span className="item-title font-color a_left">Total a pagar: </span> <span className="item-title span_right">{total_Iva} MXN</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div div className="mt-3">
+                                                <Link to="/order"> <button className="btn-add" >Pagar</button> </Link> 
+                                            </div>
+                                        </div> 
                                     </div>
+                                    
                                 </div>
                                 
                             </div>

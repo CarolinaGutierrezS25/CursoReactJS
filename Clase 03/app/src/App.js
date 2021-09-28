@@ -5,6 +5,8 @@ import ItemDetailContainer from "./Components/ItemDetailContainer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from "./Components/Cart";
 import CartContext from "./Context/CartContext";
+import Order from "./Components/Order";
+import Footer from "./Components/Footer"
 const App = () => {
     return(
         <>
@@ -16,8 +18,10 @@ const App = () => {
                         <Route path="/category/:id" component={ItemListContainer} />
                         <Route path="/item/:id" component={ItemDetailContainer} />
                         <Route path="/cart" component={Cart} />
+                        <Route path="/order" component={Order} />
                     </Switch>
                 </CartContext>
+                <Footer/>
             </BrowserRouter>
         </>
     )
