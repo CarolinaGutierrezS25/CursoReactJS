@@ -23,7 +23,7 @@ const ItemListContainer = () => {
             query = collection.where('category', '==', id).get()
 
         }else{
-            query = collection.get()
+            query = collection.where('stock', '>', 0).get()
         }
 
         query
@@ -44,6 +44,9 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
+            <div class="row">
+                <h1 className="item-title font-color mb-3">{id}</h1>
+            </div>
             <div className="container-itemlist">
                 {loading === false ? (
                     <div>

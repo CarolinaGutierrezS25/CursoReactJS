@@ -2,7 +2,7 @@ import Item from "./Item";
 
 const ItemList = ({dataShow}) => {
     return ( 
-        <div>
+        <div className="row">
             {dataShow.map((item)=>(<Item item={item}/>))}
         </div>
             
