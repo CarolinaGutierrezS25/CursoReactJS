@@ -3,18 +3,11 @@ import { useState, useContext, useEffect } from "react";
 import { context } from "../Context/CartContext";
 
 const CartWidget = () => {
-    const {items} = useContext(context)
+    const {items, quantity, get_total_items} = useContext(context)
     
-    let [quantity, setQuantity] = useState(0)
 
     useEffect(() => {
-        if(items.length >= 0){
-            let quantity_ = 0;
-            items.forEach(((element) => {
-                quantity_ += element.quantity;
-            }))
-            setQuantity(quantity_)
-        }
+        get_total_items()
     },[items])
 
     return(
