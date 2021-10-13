@@ -8,6 +8,7 @@ const CartContext = ({children}) => {
     const [items, setItems] = useState([])
     const [iva, setIva] = useState(0)
     const [total_Iva, setTotal_Iva] = useState(0)
+    let [quantity, setQuantity] = useState(0)
     const envio = 130
     
     let items_aux = [...items]
@@ -55,8 +56,18 @@ const CartContext = ({children}) => {
         setTotal_Iva(calc_total)
     }
 
+    const get_total_items = () =>{
+        if(items.length >= 0){
+            let quantity_ = 0;
+            items.forEach(((element) => {
+                quantity_ += element.quantity;
+            }))
+            setQuantity(quantity_)
+        }
+    }
+
     return(
-        <Provider value={{items, addItem, removeItem, clear, calculate_Iva, calculate_total, total_Iva, envio, iva}}>
+        <Provider value={{items, addItem, removeItem, clear, calculate_Iva, calculate_total, get_total_items, total_Iva, envio, iva, quantity}}>
             {children}
         </Provider>
     );

@@ -4,8 +4,6 @@ Proyecto final correspondiente al curso React JS en [Coderhouse](https://www.cod
 
 Este proyecto consiste en un ecommerce implementado con React, React Hooks, React Router, incluyendo librerias como React Loader Spinner, Bootstrap, por ultimo, utilizando Firebase como base de datos. 
 
-![Gif](./public/img/Wolfmark.gif)
-
 ## Librerias
 
 Las librerias fueron incluidas en este proyecto con finalidad de estilizar el contenido.
@@ -24,21 +22,10 @@ Utilizada para la implementacion del proyecto en general en conjunto de los esti
 
 Desde Github CLI introducir comando
 
-`git clone https://github.com/CarolinaGutierrezS25/Cuso-ReactJs---Coderhouse.git`
-
+`gh repo clone CarolinaGutierrezS25/CursoReactJS`
 
 #### Inicializacion
 
-Una vez clonado el repositorio, nos posicionamos desde la ventana de comandos en la carpeta 
+Una vez clonado el repositorio posicionarnos en la carpeta 
 
-`cd path_to/Cuso-ReactJs---Coderhouse`
-
-Cuando estemos posicionados en nuestra carpeta introducimos el comando
-
-`npm install`
-
-Tardara unos minutos en completar la instalación, seguido de esto, ejecutamos el comando start
-
-`npm start`
-
-Cuando el servidor comience, automáticamente va a abrir una pantalla en el navegador con la aplicación.
+`path_to/`
