@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { firestore } from "../firebase"
 import firebase from "firebase/app"
 import { Link } from "react-router-dom"
